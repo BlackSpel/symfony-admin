@@ -8,3 +8,6 @@
 4. Enter in php-fpm container `docker exec -it interview-php-1 sh`
    1. Execute migrations `php bin/console doctrine:migrations:execute`
    2. For email receiving start consumer in container `php bin/console messenger:consume async -vv`
+
+## Usage
+1. For access to admin panel need register user on page `/register` and set role `ROLE_ADMIN` from DB

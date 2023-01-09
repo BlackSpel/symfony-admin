@@ -14,6 +14,10 @@
         {% endblock %}
     </head>
     <body>
+        <div>
+            <a href="{{ path('index') }}">Home page</a>
+        </div>
+
         {% block flashes %}
             {% for label, messages in app.flashes(['success', 'warning']) %}
                 {% for message in messages %}
