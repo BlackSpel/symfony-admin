@@ -2,4 +2,10 @@
 
 {% block body %}
     <h1>Welcome!</h1>
+
+    <div>
+        <a href="{{ path('app_login') }}">Login</a>
+        <a href="{{ path('app_register') }}">Register</a>
+        <a href="{{ path('app_logout') }}">Logout</a>
+    </div>
 {% endblock %}
