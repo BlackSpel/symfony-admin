@@ -23,9 +23,15 @@ class LoginController extends AbstractController
          // last username entered by the user
          $lastUsername = $authenticationUtils->getLastUsername();
         
-        return $this->render('login/index.html.twig', [
-             'last_username' => $lastUsername,
-             'error'         => $error,
+        return $this->render('@EasyAdmin/page/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error'         => $error,
+
+            'page_title' => 'Symfony admin',
+            'csrf_token_intention' => 'authenticate',
+            'target_path' => $this->generateUrl('index'),
+            'remember_me_enabled' => true,
+            'remember_me_checked' => true,
         ]);
     }
 }
