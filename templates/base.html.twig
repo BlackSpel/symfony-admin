@@ -15,7 +15,9 @@
     </head>
     <body>
         <div>
-            <a href="{{ path('index') }}">Home page</a>
+            {% if app.request.get('_route') != 'index' %}
+                <a href="{{ path('index') }}">Home page</a>
+            {% endif %}
         </div>
 
         {% block flashes %}
