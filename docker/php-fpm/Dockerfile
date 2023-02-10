@@ -29,6 +29,7 @@ RUN apk add --no-cache \
     php81-xmlwriter \
     php81-sodium \
     php81-pecl-apcu \
+    php81-pecl-amqp \
     make \
     curl
 

@@ -46,3 +46,16 @@ services:
         volumes:
             - ./docker/logs/nginx:/var/log/nginx:cached
             - ./:/var/www/symfony:cached
+
+    rabbitmq:
+        image: rabbitmq:3.11.8-management
+        hostname: rabbitmq
+        restart: always
+        environment:
+            - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+            - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+        volumes:
+            - ./docker/rabbitmq:/var/lib/rabbitmq
+        ports:
+            - 15672:15672
+            - 5672:5672

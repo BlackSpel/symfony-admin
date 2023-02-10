@@ -1,3 +1,4 @@
 # volumes
 logs
 db
+rabbitmq
