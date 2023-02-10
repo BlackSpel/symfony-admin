@@ -6,7 +6,7 @@
     <div>
         {% if is_granted('IS_AUTHENTICATED') %}
             <a href="{{ path('app_logout') }}">Logout</a>
-            {% if is_granted('IS_AUTHENTICATED') %}
+            {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('admin') }}">Admin panel</a>
             {% endif %}
         {% else %}
