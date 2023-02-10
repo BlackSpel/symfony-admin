@@ -49,7 +49,7 @@ services:
 
     rabbitmq:
         image: rabbitmq:3.11.8-management
-        hostname: rabbitmq
+        hostname: "${RABBITMQ_HOSTNAME}"
         restart: always
         environment:
             - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
@@ -58,4 +58,4 @@ services:
             - ./docker/rabbitmq:/var/lib/rabbitmq
         ports:
             - 15672:15672
-            - 5672:5672
+            - "${RABBITMQ_PORT}:5672"
