@@ -30,6 +30,7 @@ RUN apk add --no-cache \
     php81-sodium \
     php81-pecl-apcu \
     php81-pecl-amqp \
+    php81-pecl-redis \
     make \
     curl
 
