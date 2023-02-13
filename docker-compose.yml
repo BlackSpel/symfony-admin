@@ -59,6 +59,8 @@ services:
         ports:
             - 15672:15672
             - "${RABBITMQ_PORT}:5672"
+        depends_on:
+            - nginx
 
     redis:
         image: "redis:7.0.8-alpine"
@@ -68,3 +70,5 @@ services:
         volumes:
             - ./docker/redis-data:/var/lib/redis
             - ./docker/redis/redis.conf:/usr/local/etc/redis/redis.conf
+        depends_on:
+            - nginx
