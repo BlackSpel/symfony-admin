@@ -27,3 +27,6 @@ Usage
 
 1. For access to admin panel need register user on page `/register` and set role `ROLE_ADMIN` from DB
 2. For access to test api methods in doc swagger - enter in `/api`, send request `Creates a user token.` and authorize in swagger with received token like this: `Bearer {token}`
+
+**Note:**
+Temporarily project without front
