@@ -21,6 +21,7 @@ Development manual
    1. Execute migrations `php bin/console doctrine:migrations:execute`
    2. Generate the public and private keys used for signing JWT tokens `php bin/console lexik:jwt:generate-keypair`
    3. For email receiving start consumer in container `php bin/console messenger:consume async -vv`
+   4. For run test execute `php bin/console --env=test doctrine:database:create` and `php bin/console --env=test doctrine:schema:create` then run `php bin/phpunit`
 
 Usage
 -----
