@@ -9,6 +9,8 @@ This is a test project for try new technologies. Used here:
 * Rabbit MQ
 * Redis
 * Api platform(Swagger 3 + JWT token secure auth)
+* PHPUnit
+* Xdebug
 
 Development manual
 ------------------
